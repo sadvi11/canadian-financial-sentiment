@@ -4,3 +4,5 @@ __pycache__/
 *.pyc
 artifacts/
 .DS_Store
+endpoint.json
+training_job.json
