@@ -1,0 +1,14 @@
+artifact_uri: /Users/Viresh/Desktop/sadhvi_AI Projects/canadian-financial-sentiment/mlruns/269176126503280993/f32e040570ca4482b4f44b173b8347ab/artifacts
+end_time: 1779385054405
+entry_point_name: ''
+experiment_id: '269176126503280993'
+lifecycle_stage: active
+run_id: f32e040570ca4482b4f44b173b8347ab
+run_name: canadian-sentiment-20260521-132331
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779385054397
+status: 3
+tags: []
+user_id: Viresh
