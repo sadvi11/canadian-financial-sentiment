@@ -98,6 +98,24 @@ ml.t2.medium costs $0.056/hour = $1.34/day = $40/month if left running. For a po
 
 ---
 
+
+## Experiment Tracking — MLflow
+
+All training runs are tracked with MLflow:
+
+```bash
+# Log a training run
+python3 06_experiments/log_run.py
+
+# Compare all runs
+python3 06_experiments/compare_runs.py
+
+# Launch visual UI at http://localhost:5001
+python3 -m mlflow ui --backend-store-uri mlruns --port 5001
+```
+
+Tracked per run: hyperparameters · accuracy · billable seconds · cost · model S3 URI
+
 ## Quick Start
 
 ```bash
