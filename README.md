@@ -227,3 +227,8 @@ Nokia India (5G Packet Core) → Cloud & AI Engineering
 Calgary, AB, Canada | Permanent Resident | Open to Relocation
 
 [LinkedIn](https://linkedin.com/in/sadhvi-sharma-5789a6249) | [GitHub](https://github.com/sadvi11) | [@smart_moneycanada](https://instagram.com/smart_moneycanada)
+
+## Next Steps
+- [ ] Expand training data to 500+ headlines
+- [ ] Add neutral class examples from Bank of Canada
+- [ ] Target 80%+ accuracy with more data
