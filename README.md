@@ -185,7 +185,7 @@ curl -X POST http://localhost:5003/predict \
 
 ---
 
-## Interview Talking Points
+## Design Decisions
 
 - **Why SageMaker over local ML** — managed infrastructure, no Docker management, scales automatically, integrated with IAM and S3
 - **BlazingText algorithm** — AWS built-in text classifier, supervised mode, FastText architecture, word n-grams for better accuracy
