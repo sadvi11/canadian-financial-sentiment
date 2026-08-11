@@ -1,0 +1,40 @@
+name: Tests
+
+# The suite in tests/ existed before this workflow but could never run: the
+# Flask app lives in 05_api/, a directory name that cannot be imported as a
+# package, so collection failed with ModuleNotFoundError. tests/conftest.py
+# fixes the path; this workflow makes sure it stays fixed.
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: API unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install the API's runtime and test dependencies
+        # Deliberately not the full requirements.txt: sagemaker and mlflow are
+        # needed to train and deploy, not to exercise the API surface, and
+        # pulling them would add minutes to every run for no extra coverage.
+        run: pip install flask pytest python-dotenv boto3
+
+      - name: Run tests
+        run: python -m pytest tests/ -q
+
+      - name: Every Python file must at least compile
+        run: |
+          # Cheap guard over the pipeline scripts the unit tests do not import.
+          find . -name '*.py' -not -path './.venv/*' -print0 \
+            | xargs -0 -n1 python -m py_compile
+          echo "all Python files compile"
