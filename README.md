@@ -1,5 +1,7 @@
 # Canadian Financial Sentiment Classifier — AWS SageMaker
 
+[![Tests](https://github.com/sadvi11/canadian-financial-sentiment/actions/workflows/tests.yml/badge.svg)](https://github.com/sadvi11/canadian-financial-sentiment/actions/workflows/tests.yml)
+
 > Production ML pipeline classifying Canadian financial news as Positive / Negative / Neutral using AWS SageMaker BlazingText — trained, deployed, and serving real-time predictions.
 
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python)](https://python.org)
